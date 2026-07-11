@@ -46,9 +46,11 @@ export function ArchiveExperience() {
       <a href="#top" className="brand"><Mark /><span>ZION</span></a>
       <div className="file-id">DOSSIER Nº ZN–001 / 2026</div>
       <nav className={menu ? "open" : ""}>
-        <a href="/manifesto" onClick={() => setMenu(false)}>L’HISTOIRE</a>
-        <a href="/boutique" onClick={() => setMenu(false)}>L’ARCHIVE</a>
-        <a href="/boutique/buzzoff" onClick={() => setMenu(false)}>LA PIÈCE</a>
+        <a href="#top" onClick={() => setMenu(false)}>ACCUEIL</a>
+        <a href="/manifesto" onClick={() => setMenu(false)}>MANIFESTE</a>
+        <a className="nav-shop" href="/boutique" onClick={() => setMenu(false)}>BOUTIQUE</a>
+        <a href="/a-propos" onClick={() => setMenu(false)}>À PROPOS</a>
+        <a href="/contact" onClick={() => setMenu(false)}>CONTACT</a>
       </nav>
       <button className="menu" onClick={() => setMenu(!menu)} aria-label="Menu">{menu ? "FERMER" : "INDEX"}</button>
     </header>
