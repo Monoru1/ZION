@@ -5,7 +5,7 @@ import type { ReactNode } from "react";
 const links = [
   { href: "/manifesto", label: "MANIFESTE" },
   { href: "/boutique", label: "L’ARCHIVE" },
-  { href: "/a-propos", label: "À PROPOS" },
+  { href: "/a-propos", label: "NOTRE HISTOIRE" },
   { href: "/contact", label: "REJOINDRE" },
 ];
 
