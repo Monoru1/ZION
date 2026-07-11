@@ -46,9 +46,9 @@ export function ArchiveExperience() {
       <a href="#top" className="brand"><Mark /><span>ZION</span></a>
       <div className="file-id">DOSSIER Nº ZN–001 / 2026</div>
       <nav className={menu ? "open" : ""}>
-        <a href="#story" onClick={() => setMenu(false)}>L’HISTOIRE</a>
-        <a href="#archive" onClick={() => setMenu(false)}>L’ARCHIVE</a>
-        <a href="#piece" onClick={() => setMenu(false)}>LA PIÈCE</a>
+        <a href="/manifesto" onClick={() => setMenu(false)}>L’HISTOIRE</a>
+        <a href="/boutique" onClick={() => setMenu(false)}>L’ARCHIVE</a>
+        <a href="/boutique/buzzoff" onClick={() => setMenu(false)}>LA PIÈCE</a>
       </nav>
       <button className="menu" onClick={() => setMenu(!menu)} aria-label="Menu">{menu ? "FERMER" : "INDEX"}</button>
     </header>
@@ -116,6 +116,11 @@ export function ArchiveExperience() {
       <RuleLabel>MANIFESTE / À CONSERVER</RuleLabel>
       <motion.div {...reveal}><p>NOUS AVONS HÉRITÉ D’UNE HISTOIRE.</p><h2>NOUS CHOISISSONS<br/>CE QU’ELLE DEVIENT.</h2></motion.div>
       <div className="manifesto-foot"><span>ZION N’EST PAS UN RETOUR EN ARRIÈRE.</span><span>C’EST UNE MANIÈRE D’AVANCER ENTIÈREMENT.</span></div>
+    </section>
+
+    <section className="archive-two-link">
+      <div className="archive-two-image"><img src="/archive-002" alt="Des tresses écrivent THERE’S ZION sur un crâne vu de dessus." /></div>
+      <div><span>ARCHIVE 002 / PIÈCE DOCUMENTAIRE</span><h2>THERE’S<br /><em>ZION.</em></h2><p>Ce qui a été transmis ne disparaît pas. Il trouve une autre manière de parler.</p><a href="/manifesto">OUVRIR LE DOSSIER →</a></div>
     </section>
 
     <section className="arrival">
