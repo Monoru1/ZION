@@ -48,8 +48,8 @@ export function ArchiveExperience() {
       <nav className={menu ? "open" : ""}>
         <a href="#top" onClick={() => setMenu(false)}>ACCUEIL</a>
         <a href="/manifesto" onClick={() => setMenu(false)}>MANIFESTE</a>
-        <a className="nav-shop" href="/boutique" onClick={() => setMenu(false)}>BOUTIQUE</a>
-        <a href="/a-propos" onClick={() => setMenu(false)}>À PROPOS</a>
+        <a className="nav-shop" href="/boutique" onClick={() => setMenu(false)}>L’ARCHIVE</a>
+        <a href="/a-propos" onClick={() => setMenu(false)}>NOTRE HISTOIRE</a>
         <a href="/contact" onClick={() => setMenu(false)}>CONTACT</a>
       </nav>
       <button className="menu" onClick={() => setMenu(!menu)} aria-label="Menu">{menu ? "FERMER" : "INDEX"}</button>
