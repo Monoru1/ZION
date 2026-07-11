@@ -119,7 +119,7 @@ export function ArchiveExperience() {
     </section>
 
     <section className="archive-two-link">
-      <div className="archive-two-image"><img src="/archive-002" alt="Des tresses écrivent THERE’S ZION sur un crâne vu de dessus." /></div>
+      <div className="archive-two-image"><img src="/archive-002-v2" alt="Des tresses écrivent THERE’S ZION sur un crâne vu de dessus." /></div>
       <div><span>ARCHIVE 002 / PIÈCE DOCUMENTAIRE</span><h2>THERE’S<br /><em>ZION.</em></h2><p>Ce qui a été transmis ne disparaît pas. Il trouve une autre manière de parler.</p><a href="/manifesto">OUVRIR LE DOSSIER →</a></div>
     </section>
 
