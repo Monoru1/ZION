@@ -1,8 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { motion, useScroll, useSpring } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion, useScroll, useSpring } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const reveal = { initial: { opacity: 0, y: 34 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: .22 }, transition: { duration: .75, ease: [0.22, 1, 0.36, 1] as const } };
 
@@ -22,7 +22,25 @@ export function ArchiveExperience() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 24, restDelta: .001 });
   const [menu, setMenu] = useState(false);
+  const [intro, setIntro] = useState(true);
+  useEffect(() => {
+    document.body.style.overflow = intro ? "hidden" : "";
+    const timer = window.setTimeout(() => setIntro(false), 5200);
+    return () => { window.clearTimeout(timer); document.body.style.overflow = ""; };
+  }, [intro]);
   return <main>
+    <AnimatePresence>
+      {intro && <motion.div className="intro" exit={{ y: "-100%" }} transition={{ duration: 1.15, ease: [0.76, 0, 0.24, 1] }}>
+        <div className="intro-top"><span>ZN / TRANSMISSION 001</span><button onClick={() => setIntro(false)}>PASSER</button></div>
+        <motion.div className="intro-mark" initial={{ opacity: 0, scale: .88 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 1.1 }}><Image src="/brand-icon" width={512} height={512} alt="ZION" priority /></motion.div>
+        <div className="intro-copy" aria-label="Welcome to Zion">
+          <div className="intro-line"><motion.span initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ delay: .8, duration: .85, ease: [0.22,1,0.36,1] }}>WELCOME</motion.span></div>
+          <div className="intro-line"><motion.span initial={{ y: "110%" }} animate={{ y: 0 }} transition={{ delay: 1.05, duration: .85, ease: [0.22,1,0.36,1] }}>TO ZION.</motion.span></div>
+        </div>
+        <div className="intro-progress"><motion.i initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={{ duration: 4.4, ease: "linear" }} /></div>
+        <div className="intro-foot"><span>UNE ARCHIVE VIVANTE</span><span>NÉE D’AFRIQUE · DESTINÉE AU MONDE</span></div>
+      </motion.div>}
+    </AnimatePresence>
     <motion.div className="progress" style={{ scaleX }} />
     <header className="nav">
       <a href="#top" className="brand"><Mark /><span>ZION</span></a>
@@ -98,6 +116,16 @@ export function ArchiveExperience() {
       <RuleLabel>MANIFESTE / À CONSERVER</RuleLabel>
       <motion.div {...reveal}><p>NOUS AVONS HÉRITÉ D’UNE HISTOIRE.</p><h2>NOUS CHOISISSONS<br/>CE QU’ELLE DEVIENT.</h2></motion.div>
       <div className="manifesto-foot"><span>ZION N’EST PAS UN RETOUR EN ARRIÈRE.</span><span>C’EST UNE MANIÈRE D’AVANCER ENTIÈREMENT.</span></div>
+    </section>
+
+    <section className="arrival">
+      <div className="arrival-meta"><span>COMMUNIQUÉ Nº 001</span><span>11 / 07 / 2026</span><span>DIFFUSION MONDIALE</span></div>
+      <motion.div className="arrival-copy" {...reveal}>
+        <p>NOUS N’ARRIVONS PAS POUR SUIVRE UNE ÉPOQUE.</p>
+        <h2><span>ZION</span><br/>IS COMING.</h2>
+        <p className="arrival-note">Nous arrivons pour laisser une trace.<br/>Pour porter ce qui nous précède vers ce qui vient.</p>
+      </motion.div>
+      <div className="arrival-tape"><span>WELCOME TO ZION</span><span>ARCHIVE 001</span><span>COMING SOON</span><span>WELCOME TO ZION</span></div>
     </section>
 
     <section className="community">
