@@ -11,7 +11,7 @@ const archiveImage = imagePart1 + imagePart2 + imagePart3 + imagePart4 + imagePa
 export function GET() {
   return new Response(Buffer.from(archiveImage, "base64"), {
     headers: {
-      "Content-Type": "image/png",
+      "Content-Type": "image/webp",
       "Cache-Control": "public, max-age=31536000, immutable",
     },
   });
