@@ -17,7 +17,7 @@ export default function ManifestoPage() {
     <section className="exhibit-002" aria-labelledby="exhibit-title">
       <div className="exhibit-number">ARCHIVE<br />002</div>
       <div className="exhibit-image-wrap">
-        <img src="/archive-002" alt="Vue de dessus : des tresses forment les mots THERE’S ZION sur le crâne d’une personne portant un vêtement bordeaux." className="exhibit-image" />
+        <img src="/archive-002-v2" alt="Vue de dessus : des tresses forment les mots THERE’S ZION sur le crâne d’une personne portant un vêtement bordeaux." className="exhibit-image" />
         <span className="exhibit-caption">THERE’S ZION / 2026</span>
       </div>
       <div className="exhibit-copy"><p>PIÈCE DOCUMENTAIRE Nº 002</p><h2 id="exhibit-title">THERE’S<br /><em>ZION.</em></h2><p>Dans chaque geste, dans chaque tresse, il y a une langue. Une façon de dire : nous sommes là.</p></div>
